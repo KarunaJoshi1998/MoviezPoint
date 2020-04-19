@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background"
+        android:scaleType="fitXY"
+        android:id="@+id/imageBackground"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo_moviez_point"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/image_logo"
+        android:layout_below="@id/text_app_name"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/app_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        android:layout_alignBottom="@id/imageBackground"
+        android:id="@+id/text_app_name"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="@android:color/black"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_app_name"
+        android:id="@+id/relativeLayout"
+        android:layout_marginTop="80dp"
+        android:padding="16dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="googleLogin"
+        android:background="@drawable/white_button"
+        android:text="Sign-Up Using Google"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:id="@+id/btnGoogleLogin"
+        android:textAlignment="textStart"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:paddingStart="15dp"
+        android:drawablePadding="45dp"
+        android:textColor="@color/Blue"
+        android:drawableLeft="@drawable/google"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        />
+
+        <com.tuyenmonkey.mkloader.MKLoader
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            app:mk_color="@color/Blue"
+            app:mk_type="TwinFishesSpinner"
+            android:id="@+id/loader"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.BookingActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_blue"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:onClick="imageBack"
+                android:id="@+id/image_back"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Book Your Seats"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginLeft="50dp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:mk_type="TwinFishesSpinner"
+        android:layout_centerInParent="true"
+        app:mk_color="@color/Blue"
+        android:id="@+id/loader"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:padding="10dp"
+        android:id="@+id/scrollView"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relative_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Movie screen this way"
+        android:layout_marginTop="20dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:id="@+id/textscreen"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:id="@+id/screen_view"
+        android:background="@color/screen_blue"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/textscreen"/>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/tableLayout"
+        android:layout_below="@id/screen_view">
+
+        <TableRow>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_first_five"
+                android:layout_width="fill_parent"
+                app:tbgChildSpacing="2dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/one"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="1"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/two"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="2"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/three"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="3"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/four"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="4"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_second_five"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                app:tbgChildSpacing="2dp"
+                android:layout_height="wrap_content"
+                >
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/five"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="5"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/six"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="6"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/seven"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="7"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/eight"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="8"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+        </TableRow>
+
+        <TableRow>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_third_five"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="30dp"
+                app:tbgChildSpacing="2dp"
+                android:layout_height="wrap_content"
+                >
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/nine"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="9"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/ten"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="10"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/eleven"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="11"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            <com.nex3z.togglebuttongroup.button.CircularToggle
+                android:id="@+id/twelve"
+                android:textSize="20dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/ic_seat"
+                android:textColor="@android:color/transparent"
+                android:text="12"
+                app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_fourth_five"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                app:tbgChildSpacing="2dp"
+                android:layout_height="wrap_content"
+                >
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/thirteen"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="13"
+                    android:textSize="20dp"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/fourteen"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:textSize="20dp"
+                    android:text="14"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/fifteen"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:textSize="20dp"
+                    android:text="15"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/sixteen"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="16"
+                    android:textSize="20dp"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+        </TableRow>
+
+        <TableRow>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_fifth_five"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="30dp"
+                app:tbgChildSpacing="2dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp">
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/seventeen"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="17"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/eighteen"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="18"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+
+            <com.nex3z.togglebuttongroup.MultiSelectToggleGroup
+                android:id="@+id/group_sixth_five"
+                android:layout_width="fill_parent"
+                android:layout_marginTop="30dp"
+                app:tbgChildSpacing="2dp"
+                android:layout_marginLeft="20dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp">
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/nineteen"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:textColor="@android:color/transparent"
+                    android:text="19"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+                <com.nex3z.togglebuttongroup.button.CircularToggle
+                    android:id="@+id/twenty"
+                    android:textSize="20dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/ic_seat"
+                    android:text="20"
+                    android:textColor="@android:color/transparent"
+                    app:tbgMarkerColor="@android:color/transparent"/>
+
+            </com.nex3z.togglebuttongroup.MultiSelectToggleGroup>
+        </TableRow>
+
+    </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Seats : "
+                android:id="@+id/selectedSeatText"
+                android:layout_below="@id/tableLayout"
+                android:layout_marginTop="50dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/selectedSeat"
+                android:layout_below="@id/tableLayout"
+                android:layout_toRightOf="@id/selectedSeatText"
+                android:layout_marginTop="50dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Amount : "
+                android:id="@+id/amountTextView"
+                android:layout_below="@id/selectedSeatText"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/amountShow"
+                android:layout_below="@id/selectedSeatText"
+                android:layout_toRightOf="@id/amountTextView"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/layout1"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:text="Proceed to Pay"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@android:color/white"
+        android:background="@drawable/blue_button"
+        android:id="@+id/btnproceed_pay"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout1"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true">
+
+    <com.nex3z.togglebuttongroup.button.CircularToggle
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:tbgMarkerColor="@android:color/transparent"
+        android:id="@+id/selected_radio"
+        android:background="@drawable/ic_seats_selected"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/selected_radio"
+        android:layout_marginLeft="2dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+        android:text="Selected"
+        android:id="@+id/selected_radio_text"
+        android:layout_centerVertical="true"/>
+
+    <com.nex3z.togglebuttongroup.button.CircularToggle
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/available_radio"
+        android:layout_toRightOf="@id/selected_radio_text"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_seat"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/available_radio"
+            android:layout_marginLeft="2dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:text="Available"
+            android:id="@+id/available_radio_text"
+            android:layout_centerVertical="true"/>
+
+    <com.nex3z.togglebuttongroup.button.CircularToggle
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:id="@+id/booked_radio"
+        app:tbgMarkerColor="@android:color/transparent"
+        android:layout_toRightOf="@id/available_radio_text"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/ic_seats_booked"
+        />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/booked_radio"
+            android:layout_marginLeft="2dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+            android:text="Booked"
+            android:id="@+id/booked_radio_text"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

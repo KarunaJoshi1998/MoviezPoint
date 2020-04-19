@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1069928511588",
+    "firebase_url": "https://movie-ticket-booking-app-cbedd.firebaseio.com",
+    "project_id": "movie-ticket-booking-app-cbedd",
+    "storage_bucket": "movie-ticket-booking-app-cbedd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069928511588:android:00957430ef9e8c3ec04771",
+        "android_client_info": {
+          "package_name": "com.example.movieticketbookingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069928511588-04ihb7splemprtqmuicee0d6be60mom2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.movieticketbookingapp",
+            "certificate_hash": "64f5a0bb0d61c08637c1748e1e0df66876b9d8f0"
+          }
+        },
+        {
+          "client_id": "1069928511588-4vis4uv0d7t5r4hfn3s0dkef1iapejac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXN0FBdBtc4HrILChLazcV9AFCty-6dtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069928511588-4vis4uv0d7t5r4hfn3s0dkef1iapejac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1069928511588:android:2b72d8966a69da98c04771",
+        "android_client_info": {
+          "package_name": "com.example.moviezpoint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1069928511588-n6l39apcgut9oj57vkp0hesbjt0tni7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moviezpoint",
+            "certificate_hash": "53bcdfae9267ef00e3d6da98f9c87a8449158566"
+          }
+        },
+        {
+          "client_id": "1069928511588-4vis4uv0d7t5r4hfn3s0dkef1iapejac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXN0FBdBtc4HrILChLazcV9AFCty-6dtM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1069928511588-4vis4uv0d7t5r4hfn3s0dkef1iapejac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

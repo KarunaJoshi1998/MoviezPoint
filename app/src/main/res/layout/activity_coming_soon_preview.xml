@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.ComingSoonPreviewActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_blue"
+        android:id="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_arrow_back"
+                android:scaleType="fitXY"
+                android:layout_centerVertical="true"
+                android:onClick="imageBack"
+                android:id="@+id/image_back"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Movie Preview"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:layout_marginLeft="50dp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/loader"
+        android:layout_centerInParent="true"
+        app:mk_type="TwinFishesSpinner"
+        app:mk_color="@color/Blue"
+        android:visibility="gone"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollViewLayout"
+        android:layout_below="@id/toolbar"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/relativeLayout1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/trailerText"
+                android:visibility="gone"/>
+
+            <com.google.android.youtube.player.YouTubePlayerView
+                android:id="@+id/youtube_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/relativeLayout"
+                android:layout_marginTop="05dp"
+                android:padding="16dp"
+                android:layout_below="@id/youtube_view">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title"
+                    android:text="name"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Trailer"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/title"
+                    android:id="@+id/textTrailer"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/recyclerViewTrailer"
+                    android:layout_marginTop="20dp"
+                    android:layout_below="@id/textTrailer"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Duration : "
+                    android:layout_below="@id/textGenre"
+                    android:layout_marginTop="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"
+                    android:id="@+id/textDuration"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/textDuration"
+                    android:text="duration"
+                    android:layout_below="@id/textGenre"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/duration"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Genre : "
+                    android:id="@+id/textGenre"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/recyclerViewTrailer"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/genre"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textColor="@android:color/black"
+                    android:layout_below="@id/recyclerViewTrailer"
+                    android:layout_marginTop="10dp"
+                    android:text=""
+                    android:layout_toRightOf="@id/textGenre"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textReleaseDate"
+                    android:text="Release Date : "
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"
+                    android:layout_below="@id/textDuration"
+                    android:layout_marginTop="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/release_date"
+                    android:text=""
+                    android:layout_below="@id/textDuration"
+                    android:layout_marginTop="15dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"
+                    android:layout_toRightOf="@id/textReleaseDate"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Production Companies"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"
+                    android:layout_below="@id/release_date"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/textproduction"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/recyclerView"
+                    android:layout_below="@id/textproduction"
+                    android:layout_marginTop="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDescription"
+                    android:text="Description"
+                    android:layout_below="@id/recyclerView"
+                    android:layout_marginTop="30dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txtDescription"
+                    android:id="@+id/description"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="25dp"
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

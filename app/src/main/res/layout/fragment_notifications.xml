@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerViewNotifications"
+        />
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:mk_type="TwinFishesSpinner"
+        android:layout_centerInParent="true"
+        app:mk_color="@color/Blue"
+        android:id="@+id/loader"
+        android:visibility="gone"/>
+
+</RelativeLayout>

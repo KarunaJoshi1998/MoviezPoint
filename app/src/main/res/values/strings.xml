@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Moviez Point</string>
+    <string name="player_error">Error initializing YouTube player: %s</string>
+    <string name="seek_to">Jump To</string>
+    <string name="seek_to_hint">Seconds</string>
+    <string name="app_info">This application is an Android OS based application used for the online ticket and seat booking for the viewers.
+    This project is a sponsorship project by the WebTech Developers PVT. LTD.</string>
+</resources>

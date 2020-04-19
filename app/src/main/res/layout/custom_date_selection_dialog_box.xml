@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/selectDateTitle"
+        android:text="Please Choose a Date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textAlignment="center"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/table_dates"
+        android:layout_below="@id/selectDateTitle"
+        android:layout_marginTop="20dp">
+
+        <TableRow>
+
+            <RadioGroup
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/dateSelectGroup"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:id="@+id/day1"
+                    android:background="@drawable/radio_background"
+                    android:padding="10dp"
+                    android:layout_margin="2dp"
+                    android:button="@android:color/transparent"
+                    android:textAlignment="center"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:layout_margin="2dp"
+                    android:id="@+id/day2"
+                    android:background="@drawable/radio_background"
+                    android:padding="10dp"
+                    android:button="@android:color/transparent"
+                    android:textAlignment="center"
+                    />
+
+                <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Date"
+                    android:layout_margin="2dp"
+                    android:id="@+id/day3"
+                    android:background="@drawable/radio_background"
+                    android:padding="10dp"
+                    android:button="@android:color/transparent"
+                    android:textAlignment="center"
+                    />
+            </RadioGroup>
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/table_dates"
+        android:layout_marginTop="20dp"
+        android:text="OK"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:textColor="@color/Blue"
+        android:id="@+id/btnOKDate"
+        android:background="@android:color/transparent"/>
+
+</RelativeLayout>

@@ -36,6 +36,7 @@ import com.makeramen.roundedimageview.RoundedImageView;
 import com.paytm.pgsdk.PaytmOrder;
 import com.paytm.pgsdk.PaytmPGService;
 import com.paytm.pgsdk.PaytmPaymentTransactionCallback;
+import com.tuyenmonkey.mkloader.MKLoader;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -193,7 +194,6 @@ public class PaymentActivity extends AppCompatActivity implements PaytmPaymentTr
                 isPDF = bookingPDF.createPDF(movieDetailsModel,theatre,showDate,showTime,amt,seatList,transactionID,firebaseUser);
 
                 if (isPDF) {
-                    Toast.makeText(PaymentActivity.this, "Your Ticket is stored to /Moviez Point/Movie Tickets", Toast.LENGTH_SHORT).show();
                     Intent successIntent = new Intent(PaymentActivity.this,PaymentSuccessActivity.class);
                     startActivity(successIntent);
                     finish();

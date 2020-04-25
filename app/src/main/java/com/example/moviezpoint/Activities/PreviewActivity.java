@@ -279,6 +279,7 @@ public class PreviewActivity extends YouTubeBaseActivity implements YouTubePlaye
                     if (production == 0) {
                         recyclerView.setVisibility(View.GONE);
                         textViewProduction.setVisibility(View.GONE);
+                        scrollView.setVisibility(View.VISIBLE);
                     }
                     else {
                         getMovieProductionData(movieDetailsModel);
@@ -342,10 +343,15 @@ public class PreviewActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
     public String getDuration(int time) {
+        if (time == 0) {
+            return "N/A";
+        }
+        else {
             int hours = time / 60;
             int minutes = time % 60;
             String length = hours + " hr " + minutes + " min";
             return length;
+        }
     }
 
     public void imageBack(View view) {

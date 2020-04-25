@@ -285,6 +285,7 @@ public class ComingSoonPreviewActivity extends YouTubeBaseActivity implements Yo
                     if (production == 0) {
                         recyclerView.setVisibility(View.GONE);
                         textViewProduction.setVisibility(View.GONE);
+                        scrollView.setVisibility(View.VISIBLE);
                     }
                     else {
                         getMovieProductionData(movieDetailsModel);

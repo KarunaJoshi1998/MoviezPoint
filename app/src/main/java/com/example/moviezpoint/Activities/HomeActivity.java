@@ -90,9 +90,6 @@ public class HomeActivity extends AppCompatActivity implements GoogleApiClient.O
 
         navigationDrawer.setCheckedItem(R.id.menu_home);
 
-        Intent intent = getIntent();
-        isSignOut = intent.getBooleanExtra("signOut",false);
-
         navigationDrawer.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

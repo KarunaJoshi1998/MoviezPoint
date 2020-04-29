@@ -20,7 +20,10 @@ import com.example.moviezpoint.Models.CustomListAdapter;
 import com.example.moviezpoint.R;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 public class TheatreActivity extends AppCompatActivity {
 
@@ -115,44 +118,23 @@ public class TheatreActivity extends AppCompatActivity {
 
     private void getDatesToRadioButtons() {
 
-        Calendar today = Calendar.getInstance();
-        int month1 = today.get(Calendar.MONTH)+1;
-        int todayDate = today.get(Calendar.DATE);
-        int year1 = today.get(Calendar.YEAR);
-        String date1 = todayDate+"-"+month1+"-"+year1;
+        Calendar calendar = Calendar.getInstance();
+        Date today = calendar.getTime();
+        DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        String date1 = dateFormat.format(today);
         day1.setText(date1);
 
-        today.add(Calendar.DATE,1);
-        int nextDate = today.get(Calendar.DATE);
-        if (nextDate == 1) {
-            today.add(Calendar.MONTH,1);
-            int month2 = today.get(Calendar.MONTH)+1;
-            int year2 = today.get(Calendar.YEAR);
-            String date2 = nextDate+"-"+month2+"-"+year2;
-            day2.setText(date2);
-        }
-        else {
-            int month2 = today.get(Calendar.MONTH)+1;
-            int year2 = today.get(Calendar.YEAR);
-            String date2 = nextDate+"-"+month2+"-"+year2;
-            day2.setText(date2);
-        }
+        calendar.add(Calendar.DATE,1);
+        Date dateday2 = calendar.getTime();
+        DateFormat dateFormat2 = new SimpleDateFormat("dd-MM-yyyy");
+        String date2 = dateFormat2.format(dateday2);
+        day2.setText(date2);
 
-        today.add(Calendar.DATE,1);
-        int dateDay3 = today.get(Calendar.DATE);
-        if (dateDay3 == 1) {
-            today.add(Calendar.MONTH,1);
-            int month3 = today.get(Calendar.MONTH)+1;
-            int year3 = today.get(Calendar.YEAR);
-            String date3 = dateDay3+"-"+month3+"-"+year3;
-            day3.setText(date3);
-        }
-        else {
-            int month3 = today.get(Calendar.MONTH)+1;
-            int year3 = today.get(Calendar.YEAR);
-            String date3 = dateDay3+"-"+month3+"-"+year3;
-            day3.setText(date3);
-        }
+        calendar.add(Calendar.DATE,1);
+        Date dateday3 = calendar.getTime();
+        DateFormat dateFormat3 = new SimpleDateFormat("dd-MM-yyyy");
+        String date3 = dateFormat3.format(dateday3);
+        day3.setText(date3);
     }
 
     public int getSelectedDate() {
